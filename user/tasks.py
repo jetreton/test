@@ -1,0 +1,7 @@
+from main.celery import app
+from .utils import *
+
+
+@app.task
+def send_activation_code_celery(email, activation_code):
+    send_activation_code(email, activation_code)
