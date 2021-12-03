@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate, get_user_model
-from tasks import send_activation_code_celery
+from .tasks import send_activation_code_celery
 
 User = get_user_model()
 
